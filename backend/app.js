@@ -1,5 +1,4 @@
 const compression = require('compression');
-const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -24,7 +23,6 @@ mongoose.set('useCreateIndex', true);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/espace/', express.static(path.join(__dirname, 'dist/client')));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -42,8 +40,5 @@ app.use((req, res, next) => {
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/candidat', candidatUserRoutes);
-app.use('/espace', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'dist/client', 'index.html'));
-});
 
 module.exports = app;
