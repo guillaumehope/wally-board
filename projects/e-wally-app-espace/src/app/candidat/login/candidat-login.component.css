@@ -1,0 +1,25 @@
+.container {
+  margin-top:   100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+.mat-raised-button{
+  background-color:#323232;
+  color: #fff;
+  align-content:space-between;
+}
+
+mat-spinner {
+  margin: auto;
+}
+

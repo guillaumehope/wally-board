@@ -1,0 +1,45 @@
+﻿<body>
+  <!--
+    <section id="preloader">
+      <div class="loader" id="loader"><div class="loader-img"></div></div>
+    </section>
+  -->
+  <div class="container center-block">
+    <mat-card>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <form [formGroup]="form" (submit)="onLogin()" *ngIf="!isLoading">
+        <mat-form-field>
+          <input
+            matInput
+            type="email"
+            formControlName="email"
+            placeholder="E-Mail"
+            email
+          />
+          <mat-error *ngIf="form.get('email').invalid"
+            >Please enter a valid email.</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+          />
+          <mat-error *ngIf="form.get('password').invalid"
+            >Please enter a valid password.</mat-error
+          >
+        </mat-form-field>
+        <ul>
+          <li>
+            <button mat-raised-button type="submit" *ngIf="!isLoading">
+              Login
+            </button>
+          </li>
+          <li><a mat-button routerLink=".">Mot de passe oublié?</a></li>
+        </ul>
+      </form>
+    </mat-card>
+  </div>
+</body>

@@ -1,0 +1,93 @@
+<header id="header" class="header header-light">
+  <div class="container header-inner">
+      <div class="logo">
+          <a routerLink="/">
+              <img class="logo-st-top" src="assets/img/n-logo.png" alt="Walley" />
+          </a>
+      </div>
+      <div class="side-menu-btn side-menu-btn-custom">
+          <ul>
+              <li>
+                  <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle navbar_btn" type="button" data-toggle="dropdown">
+                          <i class="fa fa-user icon_size"></i>
+                      </button>
+                      <ul class="dropdown-menu top_sidebar_nav" id="top_sidebar_nav">
+                          <li *ngIf="!userIsAuthenticated"><a href="http://e-wally.com:4201/candidat/candidat-signup">Signup</a></li>
+                          <li><hr /></li>
+                          <li *ngIf="userIsAuthenticated"><a routerLink="">My Profile</a></li>
+                          <li><hr /></li>
+                          <li *ngIf="!userIsAuthenticated"><a routerLink="/login">Login</a></li>
+                          <li><hr /></li>
+                          <li *ngIf="userIsAuthenticated"><a routerLink="" (click)="onLogout()">Logout</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle navbar_btn" type="button" data-toggle="dropdown">
+                          <i class="fa fa-sign-out icon_size"></i>
+                      </button>
+                      <ul class="dropdown-menu top_sidebar_nav" id="top_sidebar_nav">
+                          <li>
+                              <a  routerLink="">John Doe</a>
+                          </li>
+                          <li>
+                              <hr />
+                          </li>
+                          <li *ngIf="userIsAuthenticated">
+                              <a  routerLink="" (click)="onLogout()">Logout</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <!--<li class="">
+                  <a id="menu-sidebar-list-icon" class="nav-bar-icon nav-bar-icon-custom"><span></span></a>
+              </li>-->
+          </ul>
+      </div>
+      <div>
+<div>
+
+<a id="menu-sidebar-list-icon" class="nav-bar-icon nav-bar-icon-custom"><span></span></a>
+
+</div>
+      </div>
+      <div class="nav-mobile nav-bar-icon">
+          <span></span>
+      </div>
+      <div class="nav-menu">
+          <ul class="nav-menu-inner navbar-left">
+
+              <li>
+                  <a routerLink="/dashboard">
+                      Tableau de bord
+                  </a>
+              </li>
+              <li>
+                  <a routerLink="/monprofil">
+                      Mon profil
+                  </a>
+              </li>
+
+              <li>
+                  <a class="menu-has-sub">About <i class="fa fa-angle-down"></i></a>
+                  <!-- Dropdown -->
+                  <ul class="sub-dropdown dropdown">
+                      <li><a  routerLink="">Our Vision</a></li>
+                      <li><a  routerLink="">Our Mission</a></li>
+                      <li><a  routerLink="">Purpose</a></li>
+                      <li><a  routerLink="">Team</a></li>
+                  </ul>
+                  <!-- End Dropdown -->
+              </li>
+
+              <li>
+                  <a  routerLink="">Recherche d'emploi</a>
+
+              </li>
+          </ul>
+
+      </div>
+  </div>
+</header>

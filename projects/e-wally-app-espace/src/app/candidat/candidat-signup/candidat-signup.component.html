@@ -1,0 +1,112 @@
+﻿<!-- Header -->
+<header class="header-06">
+  <div class="header-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text-headings col-md-12">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h1 class="h001">JE SUIS CANDIDAT</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<body>
+  <section id="preloader">
+    <div class="loader" id="loader"><div class="loader-img"></div></div>
+  </section>
+  <!-- Services Section -->
+  <section class="bt-sp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <div class="border-box">
+            <h4>Création rapide de compte test</h4>
+            <mat-card>
+              <mat-spinner *ngIf="isLoading"></mat-spinner>
+              <form
+                (submit)="onSignup(signupForm)"
+                #signupForm="ngForm"
+                *ngIf="!isLoading"
+              >
+                <h4 class="form-sub">Informations personnelles</h4>
+                <mat-form-field>
+                  <input
+                    matInput
+                    name="lastname"
+                    ngModel
+                    type="text"
+                    placeholder="Nom"
+                    #lastnameInput="ngModel"
+                    required
+                  />
+                  <mat-error *ngIf="lastnameInput.invalid"
+                    >Merci d'entrer votre nom.</mat-error
+                  >
+                </mat-form-field>
+                <h4 class="form-sub">Informations du compte</h4>
+                <mat-form-field>
+                  <input
+                    matInput
+                    name="email"
+                    ngModel
+                    type="email"
+                    placeholder="Adresse email"
+                    #emailInput="ngModel"
+                    required
+                    email
+                  />
+                  <mat-error *ngIf="emailInput.invalid"
+                    >Merci d'entrer votre adresse e-mail.</mat-error
+                  >
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    type="password"
+                    name="password"
+                    ngModel
+                    matInput
+                    placeholder="Mot de passe"
+                    #passwordInput="ngModel"
+                    required
+                  />
+                  <mat-error *ngIf="passwordInput.invalid"
+                    >Merci d'entrer un mot de pase valide</mat-error
+                  >
+                </mat-form-field>
+                <mat-form-field>
+                  <input
+                    type="password"
+                    name="confirmpassword"
+                    ngModel
+                    matInput
+                    placeholder="Confirmer le mot de passe"
+                    #confirmpasswordInput="ngModel"
+                    required
+                  />
+                  <mat-error *ngIf="confirmpasswordInput.invalid"
+                    >Merci de confirmer le mot de passe saisie
+                    précédemment.</mat-error
+                  >
+                </mat-form-field>
+
+                <button
+                  mat-raised-button
+                  color="primary"
+                  type="submit"
+                  *ngIf="!isLoading"
+                >
+                  S'inscrire
+                </button>
+                <mat-spinner *ngIf="isLoading"></mat-spinner>
+              </form>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
