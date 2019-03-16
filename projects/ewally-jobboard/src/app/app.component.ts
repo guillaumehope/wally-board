@@ -8,7 +8,7 @@ import { CandidatLoginService } from './candidat/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'e-wally-app-espace';
+  title = 'ewally-jobboard';
   isLoading;
   constructor(private candidatLoginService: CandidatLoginService) {}
 

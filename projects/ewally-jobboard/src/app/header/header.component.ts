@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CandidatLoginService } from 'projects/e-wally-app-espace/src/app/candidat/auth.service';
+import { CandidatLoginService } from 'projects/ewally-jobboard/src/app/candidat/auth.service';
 import { Subscription } from 'rxjs';
 
 @Component({

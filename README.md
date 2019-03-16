@@ -5,7 +5,7 @@ Préalablement n'oubliez pas `npm install` dans le répertoire cloner pour les d
 
 ## Front-End Development server
 
-Run `ng serve --project e-wally-app-espace` for a frontend dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --project ewally-jobboard` for a frontend dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Back-End Development server
 
@@ -13,4 +13,4 @@ Run `npm run start:server` for a backend dev server. The server will lauch on `h
 
 ## Code scaffolding
 
-Run `ng g c component-name --project e-wally-app-espace` to generate a new component. You can also use `ng g directive|pipe|service|class|guard|interface|enum|module --project e-wally-app-espace`.
+Run `ng g c component-name --project ewally-jobboard` to generate a new component. You can also use `ng g directive|pipe|service|class|guard|interface|enum|module --project ewally-jobboard`.
