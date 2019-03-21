@@ -6,59 +6,16 @@
     "description": "A simple API to learn how to write OpenAPI Specification"
   },
   "schemes": ["http"],
-  "host": "e-wally.com:5202",
+  "host": "localhost:5202",
   "basePath": "/",
   "paths": {
-    "/contact": {
-      "post": {
-        "summary": "Formulaire de contact",
-        "description": "Formulaire présent sur le site e-wally",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "description": "Nom de l'expéditeur",
-            "type": "string"
-          },
-          {
-            "name": "subname",
-            "in": "query",
-            "description": "Prénom de l'expéditeur",
-            "type": "string"
-          },
-          {
-            "name": "objet",
-            "in": "query",
-            "description": "Objet de la demande",
-            "type": "string"
-          },
-          {
-            "name": "content",
-            "in": "query",
-            "description": "Contenue de la demande",
-            "type": "string"
-          },
-          {
-            "name": "email",
-            "in": "query",
-            "description": "Email de l'expéditeur",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Formulaire transmis au back-end"
-          }
-        }
-      }
-    },
-    "/contact/contacts": {
+    "/candidat/candidats": {
       "get": {
-        "summary": "Liste des demande de contact",
-        "description": "Retourne une liste des demande de contact.",
+        "summary": "Liste des candidats",
+        "description": "Retourne une liste des candidats.",
         "responses": {
           "200": {
-            "description": "La liste des demandes.",
+            "description": "La liste des candidats.",
             "schema": {
               "type": "array",
               "items": {
@@ -67,23 +24,11 @@
                   "_id": {
                     "type": "string"
                   },
-                  "name": {
-                    "type": "string"
-                  },
-                  "subname": {
-                    "type": "string"
-                  },
-                  "objet": {
-                    "type": "string"
-                  },
-                  "content": {
+                  "lastname": {
                     "type": "string"
                   },
                   "email": {
                     "type": "string"
-                  },
-                  "__v": {
-                    "type": "integer"
                   }
                 }
               }
@@ -92,22 +37,22 @@
         }
       }
     },
-    "/contact/contacts/{id}": {
-      "delete": {
-        "summary": "Suppression d'une demande de contact",
-        "description": "Permet de supprimer une demande de contact en transmettant un ID.",
+    "/candidat/candidat/{id}": {
+      "get": {
+        "summary": "Permet de récupérer les informations concernant un utilisateur",
+        "description": "Permet de récupérer les informations concernant un utilisateur en transmettant un ID.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "description": "id de la demande de contact",
+            "description": "id du candidat",
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "Demande supprimé!"
+            "description": "S!"
           }
         }
       }
